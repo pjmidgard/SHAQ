@@ -274,23 +274,7 @@ class compression:
                                                                                     	
                                                                                     if find_matches1_1!=0:
                                                                                     	Find=0
-                                                                                        
-                                                                                      
-                                                                                         
-                                                                                        
-                                                                                        
-                                                                                       
-                                                                                        
-                                                                                        
-                                                                                       
-                                                                                        
-
-                                                                                        
-                                                                                  
-                                                                         
-                                                                                     
-                                                                                    
-                                                                                         
+                                                                                                                                                                                                                                                                                      
                                                                                     sub_info1="01" 
                                                                                                                      
                                                                                     find_matches2=str_find_tree_maches.find(sub_info1, start, end)
@@ -491,6 +475,26 @@ class compression:
                                                     z=z+1
                                                                                                                     
                                                                                                                     
+                                        
+                                        
+                                        size_data24=bin(lenf)[2:]
+                                        #print(Long_block2)  
+                                        lenf=len(size_data24)
+                                        if lenf>6:
+                                                print("File too big")
+                                                raise SystemExit
+                                                                                        
+                                                                                       
+                                                                                    
+                                        add_bits118=""
+                                        count_bits=6-lenf%6
+                                        z=0
+                                        if count_bits!=0:
+                                            if count_bits!=6:
+                                                while z<count_bits:
+                                                    add_bits118="0"+add_bits118
+                                                    z=z+1
+                                                    
                                         size_data9=add_bits118+size_data24+size_data9
                                         
                                         
@@ -516,7 +520,29 @@ class compression:
                                                     add_bits118="0"+add_bits118
                                                     z=z+1
                                                     
+                                      
+                                        
+                                        size_data24=bin(lenf)[2:]
+                                        #print(Long_block2)  
+                                        lenf=len(size_data24)
+                                        if lenf>6:
+                                                print("File too big")
+                                                raise SystemExit
+                                                                                        
+                                                                                       
+                                                                                    
+                                        add_bits118=""
+                                        count_bits=6-lenf%6
+                                        z=0
+                                        if count_bits!=0:
+                                            if count_bits!=6:
+                                                while z<count_bits:
+                                                    add_bits118="0"+add_bits118
+                                                    z=z+1
+                                                    
                                         size_data9=add_bits118+size_data24+size_data9
+                                        
+                                         
                                         size_data24=bin(Long_block2)[2:]
                                         #print(Long_block2)  
                                         lenf=len(size_data24)
@@ -531,6 +557,26 @@ class compression:
                                         z=0
                                         if count_bits!=0:
                                             if count_bits!=40:
+                                                while z<count_bits:
+                                                    add_bits118="0"+add_bits118
+                                                    z=z+1
+                                                    
+                                    
+                                        
+                                        size_data24=bin(lenf)[2:]
+                                        #print(Long_block2)  
+                                        lenf=len(size_data24)
+                                        if lenf>6:
+                                                print("File too big")
+                                                raise SystemExit
+                                                                                        
+                                                                                       
+                                                                                    
+                                        add_bits118=""
+                                        count_bits=6-lenf%6
+                                        z=0
+                                        if count_bits!=0:
+                                            if count_bits!=6:
                                                 while z<count_bits:
                                                     add_bits118="0"+add_bits118
                                                     z=z+1
@@ -554,7 +600,7 @@ class compression:
                                         long_after=len(size_data9)
                                         #print(long_block) 
                                        
-                                        if long_file>long_after and long_after<=232 or lenf>39 or long_block>=long_after and long_after<=400:
+                                        if long_file>long_after and long_after<=148 or lenf>39 or long_block>=long_after and long_after<=1:
                                            
                                             size_data11=size_data9
                                             Find_guess=1
@@ -598,7 +644,44 @@ class compression:
                                                 z=z+1
                                                                                                                     
                                                                                                                                 
+                                    
+                                    size_data24=bin(lenf)[2:]
+                                    lenf=len(size_data24)
+                                    if lenf>6:
+                                        print("File too big")
+                                        raise SystemExit
+                                                                                            
+                                                                                            
+                                                                                        
+                                    add_bits118=""
+                                    count_bits=6-lenf%6
+                                    z=0
+                                    if count_bits!=0:
+                                        if count_bits!=6:
+                                            while z<count_bits:
+                                                add_bits118="0"+add_bits118
+                                                z=z+1
+                                                                                                                    
+                                                                                                                                
                                     size_data11=add_bits118+size_data24+size_data11
+                                    
+                                    size_data11="1"+size_data11
+                                    
+                                    
+                           
+                                    lenf=len(size_data11)
+                                        
+                                    add_bits118=""
+                                    count_bits=8-lenf%8
+                                    z=0
+                                    if count_bits!=0:
+                                            if count_bits!=8:
+                                                while z<count_bits:
+                                                    add_bits118="0"+add_bits118
+                                                    z=z+1
+                                                                    
+                                                                    
+                                    size_data11=add_bits118+size_data11
                                     
                                     
                                     n = int(size_data11, 2)
