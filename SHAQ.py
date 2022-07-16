@@ -476,7 +476,7 @@ class compression:
                                                                                                                     
                                                                                                                     
                                         
-                                        
+                                        lenf=len(add_bits118)
                                         size_data24=bin(lenf)[2:]
                                         #print(Long_block2)  
                                         lenf=len(size_data24)
@@ -521,7 +521,7 @@ class compression:
                                                     z=z+1
                                                     
                                       
-                                        
+                                        lenf=len(add_bits118) 
                                         size_data24=bin(lenf)[2:]
                                         #print(Long_block2)  
                                         lenf=len(size_data24)
@@ -562,7 +562,7 @@ class compression:
                                                     z=z+1
                                                     
                                     
-                                        
+                                        lenf=len(add_bits118)
                                         size_data24=bin(lenf)[2:]
                                         #print(Long_block2)  
                                         lenf=len(size_data24)
@@ -600,7 +600,7 @@ class compression:
                                         long_after=len(size_data9)
                                         #print(long_block) 
                                        
-                                        if long_file>long_after and long_after<=148 or lenf>39 or long_block>=long_after and long_after<=400:
+                                        if long_file>long_after and long_after<=120 or lenf>39 or long_block>=long_after and long_after<=152:
                                            
                                             size_data11=size_data9
                                             Find_guess=1
@@ -644,7 +644,7 @@ class compression:
                                                 z=z+1
                                                                                                                     
                                                                                                                                 
-                                    
+                                    lenf=len(add_bits118)
                                     size_data24=bin(lenf)[2:]
                                     lenf=len(size_data24)
                                     if lenf>6:
