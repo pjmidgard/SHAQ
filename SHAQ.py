@@ -357,6 +357,12 @@ class compression:
                                                                                      
                                                                                     
                                                                                     compress_yes=compress_yes+1
+                                                                                    
+                                                                                    	
+                                                                                    	                                                                                    
+                                                                                    
+                                                                                        
+                                                                                    size_data4=str_find_tree_maches[:0]+"01"+str_find_tree_maches[4:]
                                                                                     Long_block5=Long_block5+1
                                                                                     if Long_block5==1:
                                                                                     	Long_block1=len(size_data4)
@@ -364,11 +370,6 @@ class compression:
                                                                                     	
                                                                                     if Long_block5>=1:
                                                                                     	Long_block3=len(size_data4)
-                                                                                    	
-                                                                                    	                                                                                    
-                                                                                    
-                                                                                        
-                                                                                    size_data4=str_find_tree_maches[:0]+"01"+str_find_tree_maches[4:]
                                                                                     size_data6+size_data6+size_data4                                          
                                                                               
                                                                                     size_data5=""
@@ -495,7 +496,9 @@ class compression:
                                         
                                         
                                        
-                                        size_data24=bin(Long_block1)[2:]  
+                                        size_data24=bin(Long_block1)[2:]
+                                        #print(Long_block1)
+                                        #print("Long_block1")  
                                     	                                    
                                         lenf=len(size_data24)
                                         if lenf>40:
@@ -514,7 +517,8 @@ class compression:
                                                     z=z+1
                                                     
                                         size_data9=add_bits118+size_data24+size_data9
-                                        size_data24=bin(Long_block2)[2:]  
+                                        size_data24=bin(Long_block2)[2:]
+                                        #print(Long_block2)  
                                         lenf=len(size_data24)
                                         if lenf>40:
                                                 print("File too big")
